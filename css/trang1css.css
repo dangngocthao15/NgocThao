@@ -1,0 +1,57 @@
+body {
+    font-family: Arial;
+    background-color: #e6eef5;
+}
+
+/* Khung ngoài */
+.container {
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid #0077b6;
+    border-radius: 20px;
+    background-color: #d9e3ec;
+}
+
+/* Tiêu đề */
+h1 {
+    text-align: center;
+    background-color: #1982c4;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Bảng */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid red;
+    padding: 10px;
+}
+
+/* Ảnh */
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Chữ màu đỏ */
+.red {
+    color: red;
+}
+
+/* Tiêu đề nhỏ */
+h2 {
+    margin-top: 20px;
+}
+
+/* Danh sách */
+ul {
+    margin-left: 30px;
+}

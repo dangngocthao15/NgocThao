@@ -23,35 +23,62 @@ h1 {
 }
 
 /* Bảng */
-table {
+table#table1 {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
+    text-color:blue;
 }
 
-td {
-    border: 2px solid red;
+td#table1 {
+    
     padding: 10px;
 }
-
+table
+{
+	
+	 width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+table.table1 {
+   
+    border:1px soil green;
+    text-color:blue;
+    border-color:(0,0,255);
+    border-radius:50%;
+}
 /* Ảnh */
 img {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border-radius:100%
 }
 
-/* Chữ màu đỏ */
+
 .red {
-    color: red;
+    color: blue;
 }
 
-/* Tiêu đề nhỏ */
+
 h2 {
-    margin-top: 20px;
+  text-align: center;
+    background-color: #1982c4;
+    color: #000000;
+    padding: 20px;
+    border-radius: 15px;
 }
 
-/* Danh sách */
+
 ul {
     margin-left: 30px;
+}
+td{
+color:blue;
+}
+.p1{
+front-size:16px;
+color:green;
+
 }

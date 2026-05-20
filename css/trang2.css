@@ -1,0 +1,49 @@
+*{
+	font -family:"Time New Roman",Time,serif;
+	text-align:center;
+	font-size:20pt;
+	margin-bottom:10px;
+}
+body {
+    font-family: Arial;
+    background-color: #e6eef5;
+}
+
+/* Khung ngoài */
+.container {
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid #0077b6;
+    border-radius: 20px;
+    background-color: Violet;
+}
+#title{
+	text-transform:uppercase;
+	font-size:20px;
+	letter-spacing:3px;
+	text-align:center;
+	font-weight:38px;
+	margin-bottom:30px;
+	font-weight:bold;
+	color:#ff4c74;
+}
+h2{
+	color:#fff247;
+}
+label{
+	display:black;
+}
+#frmLogin
+{
+	border-radius: 25px;
+	background-color:pink;
+	padding:35px;
+	box-shadow:0 8px 30px pink;
+}
+.from-control{
+	width:100px;
+	padding:14px;
+	outline:none;
+	background :
+}

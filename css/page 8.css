@@ -1,0 +1,21 @@
+body {
+    font-family: Arial;
+    background-color: green;
+}
+
+/* Khung ngoài */
+.container {
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    background-color: red;
+    
+}
+img
+{
+    height: 250px;
+    width:200px;
+    border-radius: 20px;
+}

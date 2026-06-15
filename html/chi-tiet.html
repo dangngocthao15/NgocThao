@@ -1,30 +1,83 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Thông tin cá nhân</title>
-    <link rel="stylesheet" href="../css/trang2.css">
+    <meta charset="utf-8">
+    <title>Chi tiết địa điểm</title>
+    <link rel="stylesheet" href="../css/style2.css">
 </head>
-
 <body>
-	<div class = "container">
-		<form id ="frmLogin">
-		<h2 id ="title">Login</h2>
-		<div class = "form - group">
-			<label for = "txtUsername">Username: </label>
-			<input class ="form-control" type ="text" id="txtUsername"name = "Username"> </input>
-		</div>
-		<div class = "form - group">
-			<label for = "txtPassword">Password: </label>
-			<input class ="form-control" type ="Password" id="txtPassword"name = "Password"> </input>
-		
-		</div>
-		<input class = "button" type = "submit"id ="sbLogin"name="sbLogin"value="Login" ></input>
-		<input type= "reset"id ="rsCanel"name="Canel"value="Canel" ></input>
-		<form action="/action_page.php"><br>
-		
-		</form>
-		</form>
-		</div>
+  <a href="../index.html" style="display: inline-block; margin: 20px 0 10px 20px; color: #007bff; text-decoration: none; font-weight: bold;">← Quay lại danh sách</a>
+
+    <div class="container" id="container" style="display: flex; gap: 40px; align-items: flex-start; max-width: 900px; margin: 20px auto; padding: 20px; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 10px;">
+        
+        <div class="chi-tiet-trai">
+            <img src="" alt="" id="image" style="max-width: 100%; width: 350px; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </div>
+        
+        <div class="chi-tiet-phai" style="flex: 1;">
+            <h2 id="name" style="color: #dc3545; margin-top: 0; font-size: 28px; border-bottom: 2px solid #f8f9fa; padding-bottom: 10px;"></h2>
+            <p id="price" style="font-weight: bold; color: red; font-size: 22px; margin: 15px 0;"></p>
+            <p id="description" style="line-height: 1.6; color: #495057; font-size: 16px;"></p>
+        </div>
+
+    </div>
+
+    <script>
+        // 1. Giữ nguyên đoạn code prompt và alert tuổi của bạn
+        let name = prompt("Hãy nhập tên của bạn");
+        let yob = Number(prompt("Hãy nhập năm sinh của bạn"));
+        window.alert("Xin chào " + name + ", năm 2026 bạn đã " + (2026 - yob) + " tuổi rồi đó.");
+
+        // 2. Mảng dữ liệu đồng bộ
+        const Products = [
+            {
+                id: "1",
+                nameProducts: "AO BA OM",
+                price: "250",
+                description: "Là nơi mát nhất ở Trà Vinh",
+                image: "../assets/image/ao-ba-om.jpg"
+            },
+            {
+                id: "2",
+                nameProducts: "Thap Vĩnh Hưng",
+                price: "250",
+                description: "di tích lịch sử",
+                image: "../assets/image/thap-vinh-hung.jpg"
+            }, 
+            {
+                id: "3",
+                nameProducts: "Thap Vĩnh Hưng",
+                price: "250",
+                description: "di tích lịch sử",
+                image: "../assets/image/thap-vinh-hung.jpg"
+            }, 
+            {
+                id: "4",
+                nameProducts: "Thap Vĩnh Hưng",
+                price: "250",
+                description: "di tích lịch sử",
+                image: "../assets/image/thap-vinh-hung.jpg"
+            }
+        ];
+
+        // 3. Lấy ID từ URL (?masp=1 hoặc ?masp=2)
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('masp');
+
+        // 4. Tìm kiếm trong mảng dựa vào ID (Dùng == để tránh lệch kiểu dữ liệu)
+        const foundProduct = Products.find(obj => obj.id == productId);
+
+        // 5. Hiển thị dữ liệu ra các thẻ HTML tương ứng
+        if (foundProduct) {
+            document.getElementById('name').innerText = foundProduct.nameProducts;
+            document.getElementById('price').innerText = foundProduct.price + "đ";
+            document.getElementById('description').innerText = foundProduct.description;
+            document.getElementById('image').src = foundProduct.image;
+            document.getElementById('image').alt = foundProduct.nameProducts;
+        } else {
+            // Hiển thị thông báo nếu bạn cố tình mở file chi-tiet.html trực tiếp mà không truyền ID lên URL
+            document.getElementById("container").innerHTML = `<h2>Địa điểm không tồn tại hoặc dữ liệu đã bị xóa!</h2><a href="index.html">Quay lại trang danh sách</a>`;
+        }
+    </script>
 </body>
 </html>

@@ -39,9 +39,10 @@ function creataItem(obj) {
     const listProducts = document.getElementById("product-list");
 
     const item = document.createElement("div");
-    item.className="col"
-    item.setAttribute("class","item card-img-top");
+   item.setAttribute("class", "col");
 
+const card = document.createElement("div");
+    card.setAttribute("class", "card h-100 text-center p-3");
     const containerImage = document.createElement("div");
     containerImage.setAttribute("class","image");
 
@@ -66,11 +67,11 @@ img.src = obj.image;
     const description = document.createElement("p");
     description.innerHTML = obj.description;
 
-    const linkProduct = document.createElement("a");
-    linkProduct.innerHTML = "xem chi tiết";
-    linkProduct.setAttribute("href", obj.linkProduct);
-    linkProduct.setAttribute("class","btn btn-info");
-
+   const linkProduct = document.createElement("a");
+linkProduct.innerHTML = "xem chi tiết";
+// SỬA THÀNH DÒNG NÀY: Lấy trực tiếp linkProduct riêng của từng địa điểm
+linkProduct.setAttribute("href", "html/chi-tiet.html?masp=" + obj.id); 
+linkProduct.setAttribute("class","btn btn-info");
     containerInfo.appendChild(nameProduct);
     containerInfo.appendChild(price);
     containerInfo.appendChild(description);

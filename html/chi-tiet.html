@@ -3,66 +3,95 @@
 <head>
     <meta charset="utf-8">
     <title>Chi tiết địa điểm</title>
-    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/page9.css">
 </head>
 <body>
-  <a href="../index.html" style="display: inline-block; margin: 20px 0 10px 20px; color: #007bff; text-decoration: none; font-weight: bold;">← Quay lại danh sách</a>
+  
 
     <div class="container" id="container" style="display: flex; gap: 40px; align-items: flex-start; max-width: 900px; margin: 20px auto; padding: 20px; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 10px;">
-        
+        <a href="../index.html"
+   style="display: inline-block; margin-bottom: 20px; color: #007bff; text-decoration: none; font-weight: bold;">
+   ← Quay lại danh sách
+</a>
         <div class="chi-tiet-trai">
             <img src="" alt="" id="image" style="max-width: 100%; width: 350px; display: block; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+          <a id="link" href="#"
+       style="display:block; margin-top:10px; color:#007bff; text-decoration:none; font-weight:bold;">
+        👉 Xem chi tiết địa điểm
+    </a>
         </div>
         
         <div class="chi-tiet-phai" style="flex: 1;">
-            <h2 id="name" style="color: #dc3545; margin-top: 0; font-size: 28px; border-bottom: 2px solid #f8f9fa; padding-bottom: 10px;"></h2>
+            <h2 id="name" style="color: #dc3545; margin-top: 0; font-size: 28px; border-bottom: 2px solid hsl(0, 17%, 98%); padding-bottom: 10px;"></h2>
             <p id="price" style="font-weight: bold; color: red; font-size: 22px; margin: 15px 0;"></p>
             <p id="description" style="line-height: 1.6; color: #495057; font-size: 16px;"></p>
         </div>
+<div class="chi-tiet-trai">
+    <img src="" id="image"
+         style="width:350px; border-radius:8px;">
 
+   
+</div>
     </div>
 
     <script>
-        // 1. Giữ nguyên đoạn code prompt và alert tuổi của bạn
-        let name = prompt("Hãy nhập tên của bạn");
-        let yob = Number(prompt("Hãy nhập năm sinh của bạn"));
-        window.alert("Xin chào " + name + ", năm 2026 bạn đã " + (2026 - yob) + " tuổi rồi đó.");
-
+       
         // 2. Mảng dữ liệu đồng bộ
         const Products = [
             {
                 id: "1",
                 nameProducts: "AO BA OM",
-                price: "250",
-                description: "Là nơi mát nhất ở Trà Vinh",
-                image: "../assets/image/ao-ba-om.jpg"
+                price: "250/Chuyến đi",
+                description: "Ao Bà Om còn là nơi gắn kết cộng đồng của người Khmer ở Trà Vinh. Vào Lễ hội Ok Om Bok vào rằm tháng 10 Âm lịch, ao Bà Om trở nên rực rỡ và sôi động với nhiều hoạt động văn hóa độc đáo. Người dân đến đây để nhảy múa, hát Dù kê thể hiện tình đoàn kết và hòa hợp giữa các dân tộc. Khi đêm về, ao Bà Om càng thêm lung linh với Hội thả đèn gió, một nét đẹp truyền thống của người Khmer. Họ thả những chiếc đèn bay lên trời nhằm cầu mong mùa màng bội thu, cuộc sống an lành và hạnh phúc. MIA.vn tin rằng ao Bà Om sẽ giúp bạn có được trải nghiệm thú vị cũng như vô vàn kỷ niệm đẹp cùng người thân.",
+                image: "../assets/image/ao-ba-om.jpg",
+                  linkProduct: "https://mia.vn/cam-nang-du-lich/di-tich-lich-su-ao-ba-om-13336"
             },
+           
             {
                 id: "2",
                 nameProducts: "Thap Vĩnh Hưng",
-                price: "250",
-                description: "di tích lịch sử",
-                image: "../assets/image/thap-vinh-hung.jpg"
+                price: "250/1 chuyến đi",
+                description: "Điều đặc biệt là tại Di tích này các nhà khảo cổ tìm được rất nhiều di vật, cổ vật có giá trị. Trong số những cổ vật này có 5 cổ vật được Thủ tướng Chính phủ công nhận bảo vật quốc gia là: Tượng Nữ thần Laksmi, tượng thần Sada Shiva, đầu tượng thần Shiva, tượng Nam thần và phù điêu Nữ thần Uma. Tất cả bảo vật trên đều là những hiện vật gốc được tìm thấy trong các đợt khai quật khảo cổ ở Tháp Vĩnh Hưng.",
+                image: "../assets/image/thap-vinh-hung.jpg",
+                linkProduct: "https://dsvh.gov.vn/thap-vinh-hung-tinh-bac-lieu-22173"
             }, 
             {
                 id: "3",
-                nameProducts: "Thap Vĩnh Hưng",
-                price: "250",
-                description: "di tích lịch sử",
-                image: "../assets/image/thap-vinh-hung.jpg"
+                nameProducts: "Phố Đô Huế",
+                price: "250/1 chuyến đi",
+                description: "Quần thể di tích Cố đô Huế hay Quần thể di tích Huế là những di tích lịch sử - văn hoá do triều Nguyễn chủ trương xây dựng trong khoảng thời gian từ đầu thế kỷ 19 đến nửa đầu thế kỷ 20 trên địa bàn kinh đô Huế xưa; nay thuộc phạm vi thành phố Huế và một vài vùng phụ cận thuộc tỉnh Thừa Thiên - Huế, Việt Nam, được UNESCO công nhận là Di sản Văn hoá Thế giới vào ngày 11 tháng 12 năm 1993.",
+                image: "../assets/image/pho do hue .jpg",
+                 linkProduct: "https://dulich.tnus.edu.vn/nghiep-vu-du-lich/chi-tiet/quan-the-di-tich-co-do-hue--di-san-van-hoa-the-gioi"
             }, 
             {
                 id: "4",
-                nameProducts: "Thap Vĩnh Hưng",
-                price: "250",
+                nameProducts: "Đền Hùng Vương",
+                price: "250/1 chuyến đi",
                 description: "di tích lịch sử",
-                image: "../assets/image/thap-vinh-hung.jpg"
-            }
+                image: "../assets/image/kinh-nghiem-di-den-hung.jpg",
+ linkProduct: "https://dsvh.gov.vn/di-tich-lich-su-den-hung-2939"
+            },
+              {
+                id: "5",
+                nameProducts: "Đền Thờ Bác",
+                price: "250/1 chuyến đi",
+                description: "Năm 1989, khu đền thờ Bác ở xã Long Đức được công nhận là Di tích lịch sử cấp quốc gia, Đảng bộ và chính quyền tỉnh Trà Vinh đã nhiều lần trùng tu, tôn tạo và xây dựng thành Khu di tích trên khuôn viên rộng 5,4ha với các hạng mục: Đền thờ Bác Hồ, nhà trưng bày thân thế, sự nghiệp của Chủ tịch Hồ Chí Minh, khuôn viên cây xanh ao cá, khu vui chơi…",
+                image: "../assets/image/den tho bac .jpg",
+                 linkProduct: "https://mia.vn/cam-nang-du-lich/den-tho-bac-tra-vinh-14447"
+            },
+            {
+                id: "6",
+                nameProducts: "Chùa Một Cột",
+                price: "250/1 chuyến đi",
+                description: "Nổi tiếng ở Việt Nam",
+                image: "../assets/image/nhipsonghanoi.hanoimoi.com.vn-uploads-images-tuandiep-2022-07-31-_chua-mot-cot .jpg",
+                linkProduct: "https://nhipsonghanoi.hanoimoi.com.vn-uploads-images-tuandiep-2022-07-31-_chua-mot-cot.jpg"
+            },
         ];
 
         // 3. Lấy ID từ URL (?masp=1 hoặc ?masp=2)
         const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get('masp');
+        const productId = urlParams.get('id');
 
         // 4. Tìm kiếm trong mảng dựa vào ID (Dùng == để tránh lệch kiểu dữ liệu)
         const foundProduct = Products.find(obj => obj.id == productId);
@@ -74,10 +103,12 @@
             document.getElementById('description').innerText = foundProduct.description;
             document.getElementById('image').src = foundProduct.image;
             document.getElementById('image').alt = foundProduct.nameProducts;
+               document.getElementById("link").href = foundProduct.linkProduct;
         } else {
             // Hiển thị thông báo nếu bạn cố tình mở file chi-tiet.html trực tiếp mà không truyền ID lên URL
             document.getElementById("container").innerHTML = `<h2>Địa điểm không tồn tại hoặc dữ liệu đã bị xóa!</h2><a href="index.html">Quay lại trang danh sách</a>`;
         }
     </script>
+    
 </body>
 </html>

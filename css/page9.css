@@ -1,0 +1,14 @@
+body {
+    font-family: Arial;
+    background-color: green;
+}
+
+/* Khung ngoài */
+.container {
+    width: 60%;
+    margin: 30px auto;
+    padding: 20px;
+     background-color:blueviolet;
+}
+
+/* Tiêu đề */
